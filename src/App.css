@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* Navbar */
+.brand{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  width: 100%;
+  border: solid 3px #323232;
+  background: #212121;
+  /* opacity: 0.9; */
+  /* margin-bottom: 1rem; */
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li:hover{
+  color: #d3d3d3;
+  cursor: pointer;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.navbar a:hover {
+  color: #ddd;
+  border-bottom: 2px solid #e36f27;
+  text-decoration: none;
+}
+
+.my-active{
+  border-bottom: 2px solid #e36f27;
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Navbar */
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+
+  .navbar ul {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+
+/*  */
+
+.footer {
+  margin-top: 100px;
+}
+
+.footer i{
+  color: #e36f27;
+}
+
+/*  */
+
+.floskula {
+  border: 3px solid #e36f27;
+}
+
+.content div{
+  width: 8rem;
+  height: 2px;
+  background: #e36f27;
+  margin: 1rem auto;
+}
+
+/* card */
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0;
+}
+
+.card-img-wrap img {
+  transition: transform .5s;
+  width: 100%;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Animation */
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
